@@ -34,10 +34,10 @@ def main():
     nasdaq = "https://api.nasdaq.com/api/screener/stocks?exchange=NASDAQ&marketcap=mega|large|mid&tableonly=true&limit=3000"
     nyse = "https://api.nasdaq.com/api/screener/stocks?exchange=NYSE&marketcap=mega|large|mid&tableonly=true&limit=3000"
     
-    data = get_website(nasdaq, './\chromedriver_win32/chromedriver')
+    data = get_website(nasdaq, '../drivers/chromedriver_win32/chromedriver')
     nasdaq_tickers = get_tickers(data)
 
-    data = get_website(nyse, './\chromedriver_win32/chromedriver')
+    data = get_website(nyse, '../drivers/chromedriver_win32/chromedriver')
     nyse_tickers = get_tickers(data)
     
     return nasdaq_tickers, nyse_tickers
